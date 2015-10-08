@@ -16,5 +16,9 @@ zone "es"{
 	file "/etc/bind/db.es";
 };
 
+zone "." IN {
+	type master;
+	file "/etc/bind/db.root_mio";
+};
 
 
