@@ -19,6 +19,7 @@ zone "es"{
 zone "." IN {
 	type master;
 	file "/etc/bind/db.root_mio";
+	allow-transfer {127.0.0.1;};
 };
 
 

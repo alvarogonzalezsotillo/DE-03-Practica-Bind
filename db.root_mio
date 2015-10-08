@@ -4,6 +4,7 @@
 ; Instead, copy it, edit named.conf, and use that copy.
 ;
 $TTL	86400
+$ORIGIN .	
 @	IN	SOA	ns. root.localhost. (
 			      1		; Serial
 			 604800		; Refresh
@@ -15,9 +16,12 @@ $TTL	86400
 ns		IN	A	192.168.3.200
 profesor.	IN	A	192.168.3.200
 www.profesor.	IN	A	192.168.3.200
+nsdaw01		IN	A	102.168.3.201
 
-daw01.		IN	NS	ns.daw01.
-ns.daw01.	IN	A	192.168.3.201
+$ORIGIN daw01.
+ns	IN	A	192.168.3.201
+@		IN	NS	nsdaw01.
+
 
 daw02.		IN	NS	ns.daw02.
 ns.daw02.	IN	A	192.168.3.202
